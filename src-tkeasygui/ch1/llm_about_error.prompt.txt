@@ -1,0 +1,24 @@
+### 質問
+Pythonで簡単なプログラムを動かそうとしています。
+しかし、次のようなエラーが表示されました。何が原因でしょうか。
+どのような手順で正しく動くようにできるでしょうか、教えてください。
+
+### 実行環境について
+- Windows 11 (64ビット) 
+- メモリ: 8GB
+- ストレージ: 256GB (空き容量: 60GB)
+
+### インストールしたPythonについて
+- 公式WebサイトからダウンロードしたPython
+- バージョン: 3.11.1
+
+### 表示されたエラー
+
+以下のようなエラーが表示されました。
+
+Traceback (most recent call last):
+  File "/Users/kujirahand/repos/book-desktop-python-draft/data/src/ch1/hello_ng.py", line 3, in <module>
+    prnt("こんにちは")
+    ^^^^
+NameError: name 'prnt' is not defined. Did you mean: 'print'?
+

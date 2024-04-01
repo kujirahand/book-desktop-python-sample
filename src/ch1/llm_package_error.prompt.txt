@@ -1,0 +1,17 @@
+### 質問:
+pipコマンドを利用してPythonのパッケージをインストールしました。
+しかし、次のエラーが表示されてしまいます。
+どのようにして原因を特定できるか教えてください。
+
+### 表示されたエラー:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'flask'
+
+### 環境について:
+- Windows11
+- Python 3.11.1
+
+### 備考:
+pipのインストール先の確認方法など、具体的に教えてください。
+仮想環境など利用していません。

@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Invitation</title>
+    <style>
+    /* 日本語フォントの定義 */
+    @font-face {
+        font-family: "ipaexg";
+        src: url("./ipaexg00401/ipaexg.ttf");
+    }
+    /* 用紙サイズを定義 */
+    @page {
+        size: A4 portrait;
+        margin: 50pt;
+    }
+    body {
+        font-family: "ipaexg";
+        font-size: 12pt;
+    }
+    .r { text-align: right; }
+    .c { text-align: center; }
+    tr {
+        border: 1px solid #000;
+        padding: 12px;
+    }
+    </style>
+</head>
+<body>
+    <p class="r">2024/12/01</p>
+    <p>__name__ 様</p>
+    <p>__email__</p>
+    <div class="r">
+        株式会社 猿山動物商事<br>代表 犬山猫太
+    </div>
+    <h1 class="c">イベントのご案内</h1>
+    <p>拝啓  時下ますますご清祥のこととお慶び申し上げます。</p>
+    <p>さて、下記の通り、イベントの詳細が決定しましたのでお知らせします。
+       本用紙をチケットとしてお持ちください。
+       当日、皆様にお会いできるのを楽しみにしております。</p>
+    <p class="r">敬具</p>
+    <h3 class="c">イベントについて</h3>
+    <table>
+        <tr>
+            <th>日時</th>
+            <td>202x年 x月 x日 09:00-12:00</td>
+        </tr>
+        <tr>
+            <th>会場</th>
+            <td>東京都新宿区＊＊＊＊1111 大ホールB</td>
+        </tr>
+        <tr>
+            <th>座席</th>
+            <td>__no__ (__name__ 様限定)</td>
+        </tr>
+    </table>
+    <p>入場用QRコード:</p>
+    <p class="c"><img src="qrcode.png" width="120pt"></p>
+</body>
+</html>
