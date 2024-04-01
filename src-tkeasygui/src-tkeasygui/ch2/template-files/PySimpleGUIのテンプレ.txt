@@ -1,0 +1,14 @@
+import PySimpleGUI as sg
+
+# ラベルを配置したウィンドウを表示する
+layout = [[sg.Text("いろはにほへと")]]
+window = sg.Window("ウィンドウ", layout)
+# イベントループ
+while True:
+    # ウィンドウからイベントを取得する
+    event, values = window.read()
+    # 閉じるボタンを押したらループから抜ける
+    if event == sg.WINDOW_CLOSED:
+        break
+# 終了処理
+window.close()

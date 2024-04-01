@@ -1,0 +1,4 @@
+### 質問:
+PythonのGUIライブラリPySimpleGUIに関して質問です。
+PySimpleGUIでは、popup_xxxのようなダイアログが便利に使えます。
+どんなポップアップダイアログがあるか教えてください。
