@@ -20,17 +20,17 @@ import TkEasyGUI as sg
 
 # set path
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-TARGET_DIR = os.path.join(ROOT_DIR, "./src-tkeasygui")
+TARGET_DIR = os.path.join(ROOT_DIR, "src-tkeasygui")
 # get font
 font = ("Arial", 12)
 
-def get_program_files():
+def get_program_files(target_dir=TARGET_DIR):
     # files = os.listdir(ROOT_DIR)
     files = []
-    for root, dirs, file_list in os.walk(TARGET_DIR):
+    for root, dirs, file_list in os.walk(target_dir):
         for f in file_list:
             full = os.path.join(root, f)
-            parts = full[len(TARGET_DIR)+1:]
+            parts = full[len(ROOT_DIR)+1:]
             files.append(parts)
             print("-", parts)
     files = [f for f in files if f.endswith('.py') or f.endswith('.txt')] # filter
@@ -73,7 +73,10 @@ while True:
         files = values["-files-"]
         if len(files) > 0:
             filename = values["-files-"][0]
-            fullpath = os.path.join(TARGET_DIR, filename)
+            if filename.endswith(".txt"):
+                sg.popup("Pythonのプログラムのみ実行できます。")
+                continue
+            fullpath = os.path.join(ROOT_DIR, filename)
             Thread(target=run_program, args=(fullpath,)).start()
     if event == "-files-":
         files = values["-files-"]
@@ -85,5 +88,5 @@ while True:
                 window["-body-"].update(text)
     if event == "-filter-":
         TARGET_DIR = os.path.join(ROOT_DIR, values["-filter-"])
-        window["-files-"].update(get_program_files())
+        window["-files-"].update(get_program_files(TARGET_DIR))
 window.close()
