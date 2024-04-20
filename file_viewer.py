@@ -22,7 +22,7 @@ import TkEasyGUI as sg
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 TARGET_DIR = os.path.join(ROOT_DIR, "src-tkeasygui")
 # get font
-font = ("Arial", 12)
+font = ("Arial", 14)
 
 def get_program_files(target_dir=TARGET_DIR):
     # files = os.listdir(ROOT_DIR)
