@@ -15,3 +15,4 @@ xhtml2pdf
 reportlab
 PySide6
 wxPython
+easyocr
