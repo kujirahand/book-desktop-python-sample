@@ -48,7 +48,7 @@ def get_selected_file(values):
     files = values["-files-"]
     if len(files) > 0:
         filename = values["-files-"][0]
-        fullpath = os.path.join(TARGET_DIR, filename)
+        fullpath = os.path.join(ROOT_DIR, filename)
         return fullpath
     else:
         return ""
