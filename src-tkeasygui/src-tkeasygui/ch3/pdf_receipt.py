@@ -33,11 +33,11 @@ def make_receipt(output_file, name, memo, price):
     # 領収証に書き込みを行う --- (*6)
     page.setFont("IPAexGothic", 20)
     page.drawCentredString(150, 240, name) # 宛名を描画
-    page.drawString(120, 185, f"￥{price_n_tax:,}-") # 金額を桁を区切って描画
+    page.drawString(120, 185, f"￥{price_n_tax:,}-") # 金額の桁を区切って描画
     page.setFont("IPAexGothic", 12)
     page.drawString(85, 153, f"{memo}") # 但し書きを描画
-    page.drawRightString(215, 65, f"￥{price:,}-") # 税抜き金額を桁を区切って描画
-    page.drawRightString(215, 39, f"￥{tax:,}-") # 消費税を桁を区切って描画
+    page.drawRightString(215, 65, f"￥{price:,}-") # 税抜き金額の桁を区切って描画
+    page.drawRightString(215, 39, f"￥{tax:,}-") # 消費税の桁を区切って描画
     page.drawString(55, 55, f"{int(tax_rate*100)}") # 税率を描画
     page.drawString(327, 287, f"{date_a[0]}") # 日付(年)を描画
     page.drawString(380, 287, f"{date_a[1]}") # 日付(月)を描画

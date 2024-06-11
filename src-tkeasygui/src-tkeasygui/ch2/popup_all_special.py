@@ -4,7 +4,7 @@ import TkEasyGUI as sg
 sg.popup_no_wait("[7] popup_no_wait")
 # 3秒で自動的に閉じる --- (*8)
 print(sg.popup_auto_close("[8] popup_auto_close", auto_close_duration=3))
-# ボタンのないダイアログ --- (*9)
+# ボタンのないダイアログ --- (+9)
 sg.popup_no_buttons("[9] popup_no_buttons")
 # テキスト入力ダイアログ --- (*10)
 sg.popup_get_text("[10] popup_get_text")
