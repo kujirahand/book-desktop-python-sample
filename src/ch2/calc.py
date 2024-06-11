@@ -11,9 +11,9 @@ calc_buttons = [
 ]
 # 電卓で利用するフォントを定義する --- (*2)
 font = ("Helvetica", 20)
-# 基本的なレイアウトを作成 --- (*3a)
+# 基本的なレイアウトを作成 --- (*3)
 layout = [
-    # 電卓上部のテキストを作成
+    # 電卓上部のテキストを作成 --- (*3a)
     [sg.Text("0",
              key="-output-", 
              background_color="white", text_color="black",

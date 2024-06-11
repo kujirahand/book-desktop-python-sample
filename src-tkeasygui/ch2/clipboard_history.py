@@ -1,7 +1,6 @@
 import os
 import json
 import pyperclip
-# import PySimpleGUI as sg
 import TkEasyGUI as sg
 
 # クリップボードの履歴を保存するファイルパス --- (*1)
@@ -50,24 +49,22 @@ while True:
     # コピーボタンを押した時 --- (*6)
     if event == "コピー":
         # 選択された履歴をクリップボードにコピー
-        if len(values["-history-"]) > 0: # 選択があるかチェック
-            sel_text = values["-history-"][0]
-            # 実際の履歴データを取り出す
-            index = int(sel_text[0:2])
-            text = history[index - 1]
-            pyperclip.copy(text)
-            sg.popup("クリップボードにコピーしました")
+        sel_text = values["-history-"][0]
+        # 実際の履歴データを取り出す
+        index = int(sel_text[0:2])
+        text = history[index - 1]
+        pyperclip.copy(text)
+        sg.popup("クリップボードにコピーしました")
     # 削除ボタンを押したら履歴を削除 --- (*7)
     if event == "削除":
-        if len(values["-history-"]) > 0: # 選択があるかチェック
-            sel_text = values["-history-"][0]
-            # 実際の履歴データを取り出す
-            index = int(sel_text[0:2])
-            del history[index - 1]
-            window["-history-"].update(list_format(history))
-            save_history()
-            pyperclip.copy("") # 重複登録しないようにクリップボードをクリア
-            sg.popup("削除しました")
+        sel_text = values["-history-"][0]
+        # 実際の履歴データを取り出す
+        index = int(sel_text[0:2])
+        del history[index - 1]
+        window["-history-"].update(list_format(history))
+        save_history()
+        pyperclip.copy("") # 重複登録しないようにクリップボードをクリア
+        sg.popup("削除しました")
     # 定期的にクリップボードの内容をチェック --- (*8)
     text = pyperclip.paste()
     if text == "":
