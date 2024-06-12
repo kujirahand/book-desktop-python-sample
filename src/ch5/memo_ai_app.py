@@ -63,7 +63,7 @@ def load_handler(event, win, values):
 def ai_handler(event, win, values):
     text = values["editor"].strip()
     win["result"].update("AIの応答を待っています...")
-    # AIボタンを全てを押せないようにする --- (*12)
+    # AIボタンを全て押せないようにする --- (*12)
     for name in ai_functions:
         win[name].update(disabled=True)
     # AIに要約を依頼
@@ -93,7 +93,7 @@ def idle_handler(event, win, values):
     if ui_event == "result":
         # エディタに結果を表示 --- (*19)
         win["result"].update(ui_values["result"])
-        # AIボタンを全てを押せるように戻す
+        # AIボタンを全て押せるように戻す
         for name in ai_functions:
             win[name].update(disabled=False)
 
