@@ -1,7 +1,16 @@
-# Pythonデスクトップ本のサンプル
+# (書籍) Pythonで作るデスクトップアプリ - メモ帳からスクレイピング・生成AI利用まで
 
-本書サンプルを以下よりZIP形式でダウンロードできます。
+書籍のサンプルを以下よりZIP形式でダウンロードできます。
 
 - [サンプルをダウンロード](https://github.com/kujirahand/book-desktop-python-sample/archive/refs/tags/1.1.zip)
 
+
+## 書籍の情報
+
+- タイトル: Pythonでつくるデスクトップアプリ メモ帳からスクレイピング・生成AI利用まで
+- ISBN-10: 480261473X
+- ISBN-13: 978-4802614733
+- 出版社: ソシム (2024/7/20)
+- 単行本: 450ページ
+- [🔗Amazon](https://amzn.to/4cis2jo)
 
