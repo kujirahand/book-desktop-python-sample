@@ -14,6 +14,7 @@ python -m pip install TkEasyGUI PySimpleGUI
 import os
 import subprocess
 import sys
+import platform
 from threading import Thread
 
 import TkEasyGUI as sg
@@ -109,6 +110,7 @@ layout = [
             key="-filter-",
             enable_events=True,
         ),
+        sg.Button("Amazonで書籍を見る", key="-amazon-"),
     ],
 ]
 
@@ -121,6 +123,16 @@ def show_window():
         print("#", event, values)
         if event in [sg.WINDOW_CLOSED, "閉じる"]:
             break
+        if event == "-amazon-":
+            url = "https://amzn.to/45R2NSH"
+            pf = platform.system()
+            print("platform:", pf)
+            if pf == "Darwin":
+                subprocess.run(["open", url])
+            elif pf == "Windows":
+                subprocess.run(["start", url], shell=True)
+            else:
+                sg.popup(f"[URL] {url}")
         if event == "Run Program":
             fullpath = get_selected_file(values)
             if fullpath == "":

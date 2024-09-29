@@ -13,3 +13,5 @@
 - 単行本: 450ページ
 - [🔗Amazon](https://amzn.to/4cis2jo)
 
+![Pythonでつくるデスクトップアプリの書影](book.jpg)
+
