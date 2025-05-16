@@ -24,12 +24,15 @@
 
 **P.056** において、オプション「-U」の記述に誤りがありました。このパラメーターは、指定のバージョンに強制的に変更する、バージョン指定がなければ最新版にアップデートという意味なのですが、-Uの位置がinstallの後にあるのが正しいです。
 
-- [誤] python -m pip -U install TkEasyGUI
-- [正] python -m pip install -U TkEasyGUI
+- [誤] `python -m pip -U install TkEasyGUI`
+- [正] `python -m pip install -U TkEasyGUI`
 
 なお、特に「-U」オプションがなくても動作します。
 
-- [正] python -m pip install TkEasyGUI
+- [正] `python -m pip install TkEasyGUI`
+
+- [参考:TkEasyGUIのインストール方法](https://github.com/kujirahand/tkeasygui-python/blob/main/README-ja.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+
 
 ### PySimpleGUIの仕様変更に関して
 
