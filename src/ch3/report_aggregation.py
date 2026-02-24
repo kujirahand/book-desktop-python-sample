@@ -30,14 +30,14 @@ def make_report(target_dir, save_file):
         # 必要な項目を取得 --- (*8)
         department = sheet["B3"].value
         date = sheet["B4"].value
-        depratment_total = sheet["B5"].value
-        print(department, date, depratment_total)
+        department_total = sheet["B5"].value
+        print(department, date, department_total)
         # テンプレートに書き込む --- (*9)
         row = 8 + i - 1
         template_sheet.cell(row, 1).value = date
         template_sheet.cell(row, 2).value = department
-        template_sheet.cell(row, 3).value = depratment_total
-        total += depratment_total
+        template_sheet.cell(row, 3).value = department_total
+        total += department_total
     # 集計した結果を保存 --- (*10)
     template_book.save(save_file)
     template_book.close()
