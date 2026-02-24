@@ -9,7 +9,7 @@ window = sg.Window("領収証PDF作成", layout=[
     [sg.Text("金額"), sg.InputText(key="price")],
     [sg.Button("PDF作成")]
 ])
-# インベントループ --- (*2)
+# イベントループ --- (*2)
 while True:
     event, val = window.read()
     if event == sg.WINDOW_CLOSED:
