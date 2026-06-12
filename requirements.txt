@@ -6,7 +6,7 @@ openai
 pygame
 selenium==4.18.1
 pydub
-requests==2.31.0
+requests==2.33.0
 pillow-heif
 cryptography
 keyboard
