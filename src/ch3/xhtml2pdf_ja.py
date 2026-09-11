@@ -1,10 +1,10 @@
+import xhtml2pdf_patch_for0_2
 from xhtml2pdf import pisa
-# PDFを生成するHTML --- (*1)
+
 html = """
 <html><head>
 <title>日本語を表示しよう</title>
 <style>
-    /* 日本語フォントの定義 --- (*2) */
     @font-face {
         font-family: "ipaexg";
         src: url("./ipaexg00401/ipaexg.ttf");
@@ -18,6 +18,6 @@ html = """
     </h1>
 </body></html>
 """
-# ファイルを開いてPDFを生成 --- (*3)
-with open('xhtml2pdf_ja.pdf', 'wb') as pdf_file:
+
+with open("xhtml2pdf_ja.pdf", "wb") as pdf_file:
     pisa.CreatePDF(html, dest=pdf_file)
